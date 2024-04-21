@@ -13,8 +13,8 @@ from deep_training.nlp.models.qwen.modeling_qwen import setup_model_profile, QWe
 from deep_training.nlp.models.lora.v2 import PetlArguments
 from transformers import HfArgumentParser
 
-from data_utils import train_info_args, NN_DataHelper,global_args
-from aigc_zoo.model_zoo.qwen.llm_model import MyTransformer, QWenTokenizer
+from data_utils import config_args, NN_DataHelper,global_args
+from deep_training.zoo.model_zoo.qwen.llm_model import MyTransformer, QWenTokenizer
 
 DEVICE = "cuda"
 DEVICE_ID = "0"
@@ -74,9 +74,9 @@ async def create_item(request: Request):
 
 
 if __name__ == '__main__':
-    train_info_args['seed'] = None
+    config_args['seed'] = None
     parser = HfArgumentParser((ModelArguments, ))
-    (model_args,)  = parser.parse_dict(train_info_args,allow_extra_keys=True)
+    (model_args,)  = parser.parse_dict(config_args,allow_extra_keys=True)
 
     setup_model_profile()
 

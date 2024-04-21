@@ -19,8 +19,8 @@ from transformers import (
 from transformers.trainer_utils import get_last_checkpoint
 from transformers.utils import check_min_version, send_example_telemetry
 from transformers.utils.versions import require_version
-from data_utils import NN_DataHelper, train_info_args, get_deepspeed_config, global_args
-from aigc_zoo.model_zoo.qwen.llm_model import MyTransformer, PetlArguments, LoraConfig, PromptArguments,QWenTokenizer,QWenConfig,setup_model_profile
+from data_utils import NN_DataHelper, config_args, get_deepspeed_config, global_args
+from deep_training.zoo.model_zoo.qwen.llm_model import MyTransformer, PetlArguments, LoraConfig, PromptArguments,QWenTokenizer,QWenConfig,setup_model_profile
 from deep_training.data_helper import ModelArguments, DataArguments,TrainingArgumentsAC
 
 assert global_args["trainer_backend"] == "ac"
@@ -43,7 +43,7 @@ def main():
     training_args: TrainingArgumentsAC
     parser = HfArgumentParser((ModelArguments, TrainingArgumentsAC, DataArguments, PetlArguments, PromptArguments),
                               conflict_handler='resolve')
-    model_args, training_args, data_args, lora_args, prompt_args = parser.parse_dict(train_info_args,allow_extra_keys=True,)
+    model_args, training_args, data_args, lora_args, prompt_args = parser.parse_dict(config_args,allow_extra_keys=True,)
     lora_args = lora_args.config
     prompt_args = prompt_args.config
 

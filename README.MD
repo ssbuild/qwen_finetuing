@@ -2,13 +2,14 @@
 - [deep_training](https://github.com/ssbuild/deep_training)
 
 ```text
-    12-02 update qwen model 1.8b 7b 12b 72b 
-    10-09 support accelerator trainer
-    10-07 support colossalai trainer
-    09-26 support transformers trainer
-    09-25 0.2.4 support qwen-7b 新版 和 qwen-14b ， 旧版不再支持，旧版可以安装 deep_training <= 0.2.3
+    2024-04-22 简化
+    2023-12-02 update qwen model 1.8b 7b 12b 72b 
+    2023-10-09 support accelerator trainer
+    2023-10-07 support colossalai trainer
+    2023-09-26 support transformers trainer
+    2023-09-25 0.2.4 support qwen-7b 新版 和 qwen-14b ， 旧版不再支持，旧版可以安装 deep_training <= 0.2.3
                 support transformers trainer
-    08-11 aigc-zoo 0.1.17.post0 update config , 更新下官方权重配置文件 
+    2023-08-11 aigc-zoo 0.1.17.post0 update config , 更新下官方权重配置文件 
     dev 分支加一些新功能和想法 如果求稳定，请使用 stable分支
 
 ```

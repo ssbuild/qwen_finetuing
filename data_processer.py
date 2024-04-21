@@ -7,8 +7,8 @@ from enum import Enum
 from typing import Tuple, List
 
 import numpy as np
-from aigc_zoo.model_zoo.qwen.llm_model import QWenTokenizer
-# from aigc_zoo.model_zoo.qwen.qwen_generation_utils import make_context
+from deep_training.zoo.model_zoo.qwen.llm_model import QWenTokenizer
+# from deep_training.zoo.model_zoo.qwen.qwen_generation_utils import make_context
 from transformers import PreTrainedTokenizer
 
 
